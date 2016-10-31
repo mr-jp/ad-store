@@ -16,7 +16,7 @@ class Ad
 
     /**
      * Price of this ad
-     * @var float
+     * @var double
      */
     public $price;
 
@@ -30,10 +30,10 @@ class Ad
      * Constructor
      * @param string $id          ID of this ad
      * @param string $name        Name of this ad
-     * @param float  $price       Price for this ad
+     * @param double  $price       Price for this ad
      * @param string $description Description
      */
-    public function __construct($id, $name, float $price, $description)
+    public function __construct($id, $name, $price, $description)
     {
         $this->id = $id;
         $this->name = $name;
@@ -44,9 +44,9 @@ class Ad
     /**
      * Generic calculation function for no discount
      * @param  Array  $adArray Array of ads
-     * @return float          Total
+     * @return double          Total
      */
-    public static function calculate(Array $adArray)
+    public static function calculate($adArray)
     {
         $total = 0;
         foreach ($adArray as $ad) {

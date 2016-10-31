@@ -4,7 +4,7 @@ class OrMore implements DiscountInterface
 {
     /**
      * New price after discount
-     * @var float
+     * @var double
      */
     public $newPrice;
 
@@ -22,11 +22,11 @@ class OrMore implements DiscountInterface
 
     /**
      * Constructor
-     * @param float $newPrice New Price after discount
+     * @param double $newPrice New Price after discount
      * @param int   $quantity Quantity to check against
      * @param Ad    $ad       Ad Object
      */
-    public function __construct(float $newPrice, int $quantity, Ad $ad)
+    public function __construct($newPrice, $quantity, Ad $ad)
     {
         $this->newPrice = $newPrice;
         $this->quantity = $quantity;
@@ -36,7 +36,7 @@ class OrMore implements DiscountInterface
     /**
      * Calculate with discount
      * @param  Array  $orderArray Array of Orders
-     * @return float             Total with discount
+     * @return double             Total with discount
      */
     public function calculate(Array $orderArray)
     {

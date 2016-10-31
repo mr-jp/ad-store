@@ -54,7 +54,7 @@ class Client
 
     /**
      * Calculate the totals based on discounts
-     * @return float Total of all this persons' orders with discounts applied
+     * @return double Total of all this persons' orders with discounts applied
      */
     public function calculateTotals()
     {

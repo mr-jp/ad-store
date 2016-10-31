@@ -4,7 +4,7 @@ class Standard implements DiscountInterface
 {
     /**
      * Amount for a standard discount to be applied
-     * @var float
+     * @var double
      */
     public $amount;
 
@@ -16,10 +16,10 @@ class Standard implements DiscountInterface
 
     /**
      * Constructor
-     * @param float $amount Amount for standard discount
+     * @param double $amount Amount for standard discount
      * @param Ad    $ad     Ad object
      */
-    public function __construct(float $amount, Ad $ad)
+    public function __construct($amount, Ad $ad)
     {
         $this->amount = $amount;
         $this->ad = $ad;
@@ -28,7 +28,7 @@ class Standard implements DiscountInterface
     /**
      * Calculate Standard discount
      * @param  Array  $orderArray Array of ads to be added
-     * @return float             Total with the discount
+     * @return double             Total with the discount
      */
     public function calculate(Array $orderArray)
     {

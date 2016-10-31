@@ -36,7 +36,7 @@ class XforY implements DiscountInterface
     /**
      * Calculate the X for Y type discount
      * @param  Array  $orderArray Array of orders
-     * @return float             Total with discount
+     * @return double             Total with discount
      */
     public function calculate(Array $orderArray)
     {
