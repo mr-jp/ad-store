@@ -21,6 +21,12 @@ class Client
     public $ads;
 
     /**
+     * Total of the client's orders
+     * @var double
+     */
+    public $total;
+
+    /**
      * Constructor
      * @param string $name Name of this client
      */
@@ -54,7 +60,6 @@ class Client
 
     /**
      * Calculate the totals based on discounts
-     * @return double Total of all this persons' orders with discounts applied
      */
     public function calculateTotals()
     {
@@ -79,6 +84,31 @@ class Client
             }
         }
 
-        return $total;
+        $this->total = $total;
+    }
+
+    /**
+     * Display the user's orders and total
+     * @return string
+     */
+    public function toString()
+    {
+        $adNames = [];
+        foreach ($this->ads as $adGroup) {
+            foreach ($adGroup as $adItem) {
+                $adNames[] = $adItem->id;
+            }
+        }
+
+        $html = '';
+        $html .= '<p>';
+        $html .= "Customer: {$this->name} <br>";
+        $html .= "ID added: ";
+        $html .= implode(", ", $adNames);
+        $html .= "<br>";
+        $html .= "Total Expected: {$this->total} <br>";
+        $html .= '</p>';
+
+        return $html;
     }
 }

@@ -17,8 +17,8 @@ $client = new Client("Default");
 $client->order($classic);
 $client->order($standout);
 $client->order($premium);
-$total = $client->calculateTotals();
-echo "Default: $total <br>";
+$client->calculateTotals();
+echo $client->toString();
 
 // Unilever, should return 934.97
 $client = new Client("Unilever");
@@ -27,8 +27,8 @@ $client->order($classic);
 $client->order($classic);
 $client->order($classic);
 $client->order($premium);
-$total = $client->calculateTotals();
-echo "Unilever: $total <br>";
+$client->calculateTotals();
+echo $client->toString();
 
 // Apple, should return 1294.96
 $client = new Client("Apple");
@@ -37,8 +37,8 @@ $client->order($standout);
 $client->order($standout);
 $client->order($standout);
 $client->order($premium);
-$total = $client->calculateTotals();
-echo "Apple: $total <br>";
+$client->calculateTotals();
+echo $client->toString();
 
 // Nike, should return 1519.96
 $client = new Client("Nike");
@@ -47,8 +47,8 @@ $client->order($premium);
 $client->order($premium);
 $client->order($premium);
 $client->order($premium);
-$total = $client->calculateTotals();
-echo "Nike: $total <br>";
+$client->calculateTotals();
+echo $client->toString();
 
 // Ford
 $client = new Client("Ford");
@@ -64,5 +64,5 @@ $client->order($standout);
 $client->order($premium);
 $client->order($premium);
 $client->order($premium);
-$total = $client->calculateTotals();
-echo "Ford: $total <br>";
+$client->calculateTotals();
+echo $client->toString();
