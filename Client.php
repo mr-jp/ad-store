@@ -24,7 +24,7 @@ class Client
      * Constructor
      * @param string $name Name of this client
      */
-    public function __construct(string $name)
+    public function __construct($name)
     {
         $this->name = $name;
     }

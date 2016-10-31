@@ -33,7 +33,7 @@ class Ad
      * @param float  $price       Price for this ad
      * @param string $description Description
      */
-    public function __construct(string $id, string $name, float $price, string $description)
+    public function __construct($id, $name, float $price, $description)
     {
         $this->id = $id;
         $this->name = $name;
