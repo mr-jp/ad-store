@@ -4,7 +4,7 @@ class Client
 {
     /**
      * Name of the client
-     * @var String
+     * @var string
      */
     public $name;
 
@@ -22,9 +22,9 @@ class Client
 
     /**
      * Constructor
-     * @param String $name Name of this client
+     * @param string $name Name of this client
      */
-    public function __construct(String $name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }

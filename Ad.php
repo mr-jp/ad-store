@@ -4,13 +4,13 @@ class Ad
 {
     /**
      * ID of this add
-     * @var String
+     * @var string
      */
     public $id;
 
     /**
      * Name of this Ad
-     * @var String
+     * @var string
      */
     public $name;
 
@@ -28,12 +28,12 @@ class Ad
 
     /**
      * Constructor
-     * @param String $id          ID of this ad
-     * @param String $name        Name of this ad
+     * @param string $id          ID of this ad
+     * @param string $name        Name of this ad
      * @param float  $price       Price for this ad
-     * @param String $description Description
+     * @param string $description Description
      */
-    public function __construct(String $id, String $name, float $price, String $description)
+    public function __construct(string $id, string $name, float $price, string $description)
     {
         $this->id = $id;
         $this->name = $name;
