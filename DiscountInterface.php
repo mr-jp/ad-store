@@ -2,5 +2,5 @@
 
 interface DiscountInterface
 {
-    public abstract function calculate(Array $orderArray);
+    abstract function calculate(Array $orderArray);
 }
