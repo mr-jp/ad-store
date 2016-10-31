@@ -48,7 +48,7 @@ $client->order($premium);
 $client->order($premium);
 $client->order($premium);
 $total = $client->calculateTotals();
-echo "Default: $total <br>";
+echo "Nike: $total <br>";
 
 // Ford
 $client = new Client("Ford");
