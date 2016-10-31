@@ -26,7 +26,7 @@ class XforY implements DiscountInterface
      * @param int    $y  Y in the X for Y discount
      * @param Ad $ad Ad Object
      */
-    public function __construct(int $x, int $y, Ad $ad)
+    public function __construct($x, $y, Ad $ad)
     {
         $this->x = $x;
         $this->y = $y;
